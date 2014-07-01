@@ -1,6 +1,6 @@
 # cheap-secrets #
 
-Store your passwords in Git.
+Store your passwords in Git, encrypted with PGP.
 
 There's nothing novel or exciting here, it's just a technique and some quick
 instructions: that's the main feature. The scripts included are in bash, but
