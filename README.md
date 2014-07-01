@@ -9,7 +9,7 @@ enough to reimplement in a minute or two.
 ## Background ##
 
 A technique like this was used at an employer of mine years ago, it made sharing
-secrets across a technical team trivial and relatively secure.
+secrets across a technical team simple and relatively secure.
 
 I've implemented a version of it at every bootstrapped company I've worked with
 since. It's an easy way to securely share secrets across a team that groks
