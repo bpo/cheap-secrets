@@ -2,25 +2,28 @@
 
 Store your passwords in Git, encrypted with PGP.
 
-There's nothing novel or exciting here, it's just a technique and some quick
-instructions: that's the main feature. The scripts included are in bash, but
-trivial enough to reimplement in a minute or two.
+Nothing novel or exciting here. It's just a method and instructions, the
+triviality is the feature. The scripts included are in bash, but simple
+enough to reimplement in a minute or two.
 
-A technique like this was used at an old employer of mine years ago. I've
-implemented a version of it at every bootstrapped company I've worked with
-since. It's an easy way to securely share secrets amongst a team that groks
+## Background ##
+
+A technique like this was used at an employer of mine years ago, it made sharing
+secrets across a technical team trivial and relatively secure.
+
+I've implemented a version of it at every bootstrapped company I've worked with
+since. It's an easy way to securely share secrets across a team that groks
 version control but would prefer to follow explicit instructions when it comes
 to security.
 
-Stovepipe Studios is moving away from this method, but it's still dead simple,
+Stovepipe Studios is moving away from this method, but it remains dead simple,
 dirt cheap, and far more secure than what seems to be normal for a lot of groups 
-(i.e. passwords shared by memorization / email).
 
 
 ## Prep ##
 
 You'll need your own GPG keypair and the public keys of anyone you're working
-with.
+with. If you don't have gpg yet, consult your local search engine.
 
 If you don't have a GPG keypair yet, you can generate one using:
 
@@ -41,32 +44,50 @@ with instructions. If not you might need to find new software and/or coworkers.
 3. Write `passwords`, a plaintext file containing secrets.
 
 
-## Usage
+## Usage ##
+
+#### adding users ####
 
 To add a new user, add the file this creates to version control:
 
     gpg --export -a bpo@stovepipestudios.com > keys/bpo@stovepipestudios.com
 
+#### adding passwords ####
+
 Modify `passwords` to your heart's content, including all of your most dangerous
 secrets. When you're ready to share:
 
     ./encrypt.sh passwords
+
+This will generate `passwords.asc`, and encrypted rendition of your file. You
+can share this with your team as you would anything else, using git:
+
     git add passwords.asc
     git commit
     rm passwords
+
+#### reading passwords ####
 
 Decrypt the passwords to the screen:
 
     ./decrypt.sh passwords.asc
 
+#### editing passwords ####
+
 Decrypt to a file for editing:
 
     ./decrypt.sh passwords.asc > passwords
 
-To add everyone's keys to your keyring (this is required if you want to make
-changes):
+You'll need to remove `passwords` when you're through.
+
+#### making friends ####
+
+To add everyone's keys to your keyring:
 
     gpg --import keys/*
+
+This is required if you want to share your changes with others. The keysigning
+party is optional.
 
 
 ## Important Security Notes
