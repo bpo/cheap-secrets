@@ -6,9 +6,11 @@ There's nothing novel or exciting here, it's just a technique and some quick
 instructions: that's the main feature. The scripts included are in bash, but
 trivial enough to reimplement in a minute or two.
 
-A technique like this was used at an old employer of mine years ago. It's an
-easy way to securely share secrets amongst a team that groks version control but
-would prefer to follow explicit instructions when it comes to security.
+A technique like this was used at an old employer of mine years ago. I've
+implemented a version of it at every bootstrapped company I've worked with
+since. It's an easy way to securely share secrets amongst a team that groks
+version control but would prefer to follow explicit instructions when it comes
+to security.
 
 Stovepipe Studios is moving away from this method, but it's still dead simple,
 dirt cheap, and far more secure than what seems to be normal for a lot of groups 
