@@ -41,7 +41,8 @@ with instructions. If not you might need to find new software and/or coworkers.
 
 1. Add `decrypt.sh` and `encrypt.sh` to a Git repository you control.
 2. Ensure that `passwords` is ignored (add to `.gitignore`).
-3. Write `passwords`, a plaintext file containing secrets.
+3. Write `passwords`, a plaintext file containing secrets. Do not add it to
+   version control, ever (this is why it was ignored in step 2).
 
 
 ## Usage ##
