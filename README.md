@@ -58,7 +58,7 @@ secrets. When you're ready to share:
 
     ./encrypt.sh passwords
 
-This will generate `passwords.asc`, and encrypted rendition of your file. You
+This will generate `passwords.asc`, an encrypted rendition of your file. You
 can share this with your team as you would anything else, using git:
 
     git add passwords.asc
