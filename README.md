@@ -8,9 +8,7 @@ enough to reimplement in a minute or two.
 
 ## Background ##
 
-A technique like this was used at an employer of mine years ago, it made sharing
-secrets across a technical team simple and relatively secure.
-
+A technique like this was used at an employer of mine years ago.
 I've implemented a version of it at every bootstrapped company I've worked with
 since. It's an easy way to securely share secrets across a team that groks
 version control but would prefer to follow explicit instructions when it comes
@@ -23,7 +21,7 @@ dirt cheap, and far more secure than what seems to be normal for a lot of groups
 ## Prep ##
 
 You'll need your own GPG keypair and the public keys of anyone you're working
-with. If you don't have gpg yet, consult your local search engine.
+with. If you don't have `gpg` installed, consult your local search engine.
 
 If you don't have a GPG keypair yet, you can generate one using:
 
