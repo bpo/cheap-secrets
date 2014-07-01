@@ -40,7 +40,7 @@ with instructions. If not you might need to find new software and/or coworkers.
 ## Setup ##
 
 1. Add `decrypt.sh` and `encrypt.sh` to a Git repository you control.
-2. Ensure that 'passwords' is ignored (add to .gitignore).
+2. Ensure that `passwords` is ignored (add to `.gitignore`).
 3. Write `passwords`, a plaintext file containing secrets.
 
 
