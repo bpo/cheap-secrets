@@ -91,11 +91,13 @@ party is optional.
 
 ## Important Security Notes
 
-There are two kinds of cryptography in this world: cryptography that will stop
-your kid sister from reading your files, and cryptography that will stop major
-governments from reading your files. These scripts are about the former,
-assuming you follow instructions well and your kid sister doesn't have root
-access to your machine or much of an imagination for social engineering.
+> There are two kinds of cryptography in this world: cryptography that will stop
+> your kid sister from reading your files, and cryptography that will stop major
+> governments from reading your files. - Bruce Schneier
 
-That said, this is far superior to its most common alternative, which is
+These scripts are about the former, assuming you follow instructions well and
+your kid sister doesn't have root access to your machine or much of an
+imagination for social engineering.
+
+Still it remains far superior to its most common alternative, which is
 memorized passwords shared via email.
